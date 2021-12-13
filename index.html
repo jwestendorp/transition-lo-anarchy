@@ -82,9 +82,7 @@
   <body>
     <div id="appContainer">
       <div id="content">
-        <h1>
-          Home
-        </h1>
+        <h1>Home</h1>
         <hr />
         <main>
           <ul>
@@ -191,9 +189,7 @@ vMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWM@H@@QNNNNNMWWWWWWWWWWWWWWWWWWWW
         <div id="minimizedContents">
           Entery consumption: <span id="energySpeed">0</span>
         </div>
-        <div id="collapsedContents" hidden>
-          bonnetje
-        </div>
+        <div id="collapsedContents" hidden>bonnetje</div>
       </div>
     </div>
 
@@ -208,8 +204,8 @@ vMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWM@H@@QNNNNNMWWWWWWWWWWWWWWWWWWWW
           "red pixels": 123,
           "green pixels": 234,
           "blue pixels": 345,
-          "black pixels": 12
-        }
+          "black pixels": 12,
+        },
       };
 
       function handleEngerySpeed(newSpeed) {
@@ -267,7 +263,7 @@ vMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWM@H@@QNNNNNMWWWWWWWWWWWWWWWWWWWW
           handleEngerySpeed(energySpeed + 123);
 
           let windowObjectReference = window.open(
-            "/projects/bart/image.html",
+            "./projects/bart/image.html",
             "DescriptiveWindowName",
             `left=${Math.random() * 1000},top=${
               Math.random() * 1000
@@ -283,7 +279,7 @@ vMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWM@H@@QNNNNNMWWWWWWWWWWWWWWWWWWWW
           windowObjectReference.onload = () => {
             console.log("hello");
             bonnetje.bart = {
-              image: 999
+              image: 999,
             };
             windowObjectReference.RunCallbackFunction = closWindowCallback;
 
@@ -324,7 +320,6 @@ vMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWM@H@@QNNNNNMWWWWWWWWWWWWWWWWWWWW
           document.querySelector("body").style.opacity = "0.1";
         }
       });
-
     </script>
   </body>
 </html>
