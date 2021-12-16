@@ -1,0 +1,2 @@
+Alternative visualisation towards reducing energy consumption in daily life. Our project interfaces revolve around (enticing)(inferring) on basic human psychological behavior of discontentment and satisfaction. 
+We designed chargers that entice on the feeling of visual unease to stimulate the removal after usage. Moreover we designed a web-browser and smartphone interface that entices the removal of background applications and tabs after usage.
