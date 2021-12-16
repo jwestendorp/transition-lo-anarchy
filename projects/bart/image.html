@@ -18,11 +18,12 @@
 
     <script>
       var RunCallbackFunction = function () {}; //reference holder only
-
+      // only works on servers
       window.addEventListener(
         "beforeunload",
         function (e) {
           // Do something
+          // window.opener.onClosedWindow()
           RunCallbackFunction();
         },
         false

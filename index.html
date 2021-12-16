@@ -14,6 +14,10 @@
         margin: 0;
       }
 
+      #content {
+        padding: 20px;
+      }
+
       #appContainer {
         display: grid;
         grid-template-columns: auto 5rem;
@@ -74,8 +78,12 @@
 
       .tooltip {
         position: fixed;
-        color: rgb(0, 0, 255);
+        color: rgb(255, 255, 255);
         background: black;
+        padding: 2px;
+      }
+      .projects-content {
+        columns: 2;
       }
     </style>
   </head>
@@ -85,103 +93,9 @@
         <h1>Home</h1>
         <hr />
         <main>
-          <ul>
-            <li>
-              <article>
-                <h2>project1</h2>
-                <p>description blblalabl</p>
-
-                <a class="asciiContainer">
-                  <!-- <div id="tooltip">> click to view colored image</div> -->
-                  <pre>
-                                                                                                                                                                                             
-                                                                                                                                                                                             
-                        `.`                                                                                                                                 
-         `.~':{[rvLZDR@QNMNQKGnv?\'-`                                                                                                                       
-``._!\[ijs9dg@QNMMMMMMMMMMMMMMMMMMMMMMMMMMNQgVsr=|~`                                                                                                              
-``.^|:&gt;1jY$GwHQNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNQ#Gnj[\'.`                                                                                                    
-~8ywKQNNMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNQpVL}                                                                                               
-'MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWR                                                                                               
-`QMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWW#                                                                                               
-#MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWm                                                                                               
-VMMMMMMMMMMMMMMMMMMMMWWMWWWMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWm                                                                                               
-uMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWH                                                                                               
-1MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWH                                                                                               
-\MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW@                                                                                               
-_MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW@                                                                                               
-.NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWE`                                                                                              
-KMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWE`                                                                                              
-yMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWQ`                                ~|.                                                           
-JMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWQ`                       `|~`z$DQQMWY`                                                          
-1MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWQ`                  :nxQN@Wm|MWNWMNWKJl`                                                        
-;MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWQ`                .s#WNMWNWQbWWNWMNW$ \V`                                                       
-'MMMMMMMMMMMMMMMMMMMWMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWQ`               ^D\;WQNWWWMNMWNMWNWb  ^k`                                                      
-.NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWN`              =y^ |WNQWWWWWNWNMWNW#   ;4`                                                     
-`mMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWN`            `xu`  _WNQWWWWWQWNNWNW@`   \4.                                                    
-GMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWN.           |D\    `WMQWWWWWQWNNWNWN`    !V~                                                   
-YMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWN.         `sL`      WWQWWWWWQWMNWNWM_     `Lr`                                                 
-lMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWN.        -G[        MWQWWWWWQWMMWMWWv^`     ;x}`                                               
-;MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWM~       'b|         NWQWWWWWQMWNWNMWz=J|     `}uz:`                                            
-'MMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWM~      :b~     .&gt;lilNWQWWWWWQMWNWNNW&gt;  G|       `\l1ii*'.                                      
-.NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWM^     :w.   .iYc|`  @WNMWMWWNNWNWNNWt  .Jj_          `_{iiiii=!~`                              
-`HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWM_    _R~ `!Ju|      VWNNWQWWNNWNWNNWu    .[tl=^`            `^:[iiii?:.                        
-DMMMMMMMMMMMMMMMMMMMMMWMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWM'   `b\`iL]`        YWQQWNWMNMWMWMNWs       `_=lll='`              `.:icti^                    
-LMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWM|   \Kt9:           zWQQWNWMNWWWWWNWk     ```    `^*111i{^`              ^rL|                  
-zMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW|   =M=             IWNNWQMWQWWMMWNWX`:ii?[[]ic:`      `'=111i:-           .d.                 
-;MMMMMMMMMMMMMMMMMMMMMWMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW|   $K6|            QWMQWQNW@WWNNWMWN&gt;.        'Jr.           .!irrr]|`     `w|                
-|MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW!   Z[.iYI|`       [GMWQWNNW#WWNNWNWQ|-          _vz~              `^}lrr1!. ~b\               
-.NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW!   ;b`  ~iuu1|``:0t~NWNWNNWbMWMNWNWMl[u;`         .1v&gt;`                 -;lrcLN=              
-`HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW!    lS^ `-'SQbZEY;QWQWNNW6EWWNWMWM `;jc:`        `|rz].                   .:Ehtt.         
-bMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW!  `\r$hVQ#u:`  `\INWNWMNWyDWWNWMMW!    `:1ll&gt;![&gt;'.   ~1rr=`                Lj `!rJi`      
-0MMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW: `yi`   .\Ivtcc[:` DWQMWNWNmWWMWMMW\        rNMMMMMMQXTt:`^&gt;i1iii=\|-_:]ju`     :d:]ju`     :d~     
-zMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW: `g'  ^lzriicui'\icc@WNMWNWEiWWWWMMWwY!`      `_}z$@MWWMMMMNHyu[!.|:;=[==;!-`        Yu     
-&gt;MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW:  !d{Lj~     `iS.   uWNNWMWN{MWMWNNWt`cG!           ~=L#NWWWMMMMMMNKZv=|.             `d:     
-|MMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW\   _NG|        |w`  iWQQWQWMQMWNMMNWY  `#}               `|iJy@QQQNMWMMMMMN#xr;^`    .V[      
-.NMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW;   .#\rYc_`     8[  {WMNWNMW}XWNMMNWT   un                    `^*1cLbEQQQNMMMMMMMQd0uE&gt;       
-`HMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW;    ^JJ|^i0nttxGKX|`!MWMWNNW;JWMMWNWG  `X[                          `~![ij6RHQQNMWMNRn'       
-dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW}      .xj`nQMWWMMWWNQMMMWQNW]lWNNWMWR `xT`                                      .|_`          
-nMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW&gt;       `R! `~\zZEMWWWMWWMMMWb$WNNWMWN[G[`                                                     
-zMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=        \D'     .m:]LNWWMMMMMMMMMMMMM4V'                                                      
-=MMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW=         .tuI=_``#~  XWMWWMWMMMMMMMMMNNMJ|!19RdY]|.                                           
-|MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW[            `|]IvQu` ZWQMWQWp:MWMWWWMMMMWMMMMMMMMMMQdY]|.                                     
--NMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW?                 :H]uHWNNWNWQ{NWMMMMMMWWWWMMMMMMMMMMMMMMMN@Vv*_`                              
-`@MMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWi                  u\ tWMMWMWMMMMMMMMMMMMWMMMWWWWWMMMMMMMMMMMMMMNHVv*_`                        
-dMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWl                   yxDMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMN@Vv*_`                  
-xMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWr              .:l$KMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMNR9r:~`            
-zMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWt         `|*=]NWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM@`           
-=MMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWj         ^!. `EWWWWWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWMWE`           
-!MMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWv              ~&gt;YbNWWWWWWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWMNbv|            
-NMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWT_!&gt;?[[]]=;!'``   `|]aNWWWWWWWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWMQG?'`               
-`QMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWX;|....|:=[??iiii=:RWWWWNNWWWWWWWWMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWW=`                   
-bMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWMMNNNNNNNMWWWWWWWWWWWWWWWWWWWWWY                    `:MWWWMslrl1sgNWWWWWWWWWMMMMMMMMMMMMMMWWWWWMNXJ;mWWWW}                    
-xMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWN@@@@@EQQQQMWWWWWWWWWWWWWWWWWWWWY                     =WWWWg       `^*JKNWWWWWWWWWMMMMMWWWWWME6i'`   YWWWWl                    
-vMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWM@H@@QNNNNNMWWWWWWWWWWWWWWWWWWWWY                     xWWWWl            `'[VMWWWWWWWWWWWMmu;.        ]WWWWY                    
-=MMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWWNQ@@@@@@ENWWWWWWWWWWWWWWWWWWWWWs                    `EWWWN~               `QWWWWNNMNdj:`            |MWWW4                    
-!MMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWNE@@@@@@@@HQMWWWWWMMMMMMMWWWWWWW0                    |MWWWh                 DWWWWw`.`                `QWWWR                    
-^NMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWME@@@@@@@@@@HNMMMMMMMMMMMMMMWWWWWL                    rWWWM&gt;                 xWWWWQ`                   bWWWQ`                   
-`EMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWME@@@@@@@@E@HNMMMMMMMMMMWWWWWWMWWn                    GWWWQ`                `QWWWWM~                   YWWWN-                   
-.?DNMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWMQ@@@E@@@E@@HNMMMMWWWWWWWWMMWMEhj_                   .NWWWL                 \MMWWWW:                   [WWWM|                   
-:sQMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWMMMMMNE@@E@E@@@QQMWWWWWWMWMNK81!.                        &gt;WWWM'                 6WMWWWW?                   _MWWW&gt;                   
-`'j#MMMMMMMMMMMMMMMMMMMMWWWWWWMMMMMMMMMMMMMMMNNNMMMMWWMWWMQbY&gt;_`                             aWWWX                 .NWMWWWWY                   `QWWWr                   
--idNMMMMMMMMMMMMMMMMWWMMMMMMMMMMMMMMMWWWWWWWWWWWMQdt:.                                   HWWW1                 _QMNWWWWh                    GWWW0                   
-`}$NMMMMMMMMMMMMMWWMMMMMMMMMWWWWWWWWWWWWMHSr:.                                        MWWN-                   `_MWWWK                    vWWWG                   
-`!YEMMMMMMMMMMWWMMMMWWWWWWWWWWWMNXs['`                                            ^WWW4                     `mWWWN.                   *WWWR                   
-  _tRMMMMMMMWWWWWWWWWWWWMQyj;~`                                                 ]WWM}                      9WWWM'                   _MWWQ`                  
-     'j#MMMMWWWWWWWMEVz\`                                                       $WWQ`                      iWWWW{                   `QWWM~                  
-        -idNWWNRn?|`                                                           `QWWs                       |MWWWr                    yWWM|                  
-            .`                                                                 `]sl`                       `QWWWx                    lWWW&gt;                  
-                                                                                                            4WWWb                     ^:|`                  
-                                                                                                            tWWWE`                                          
-                                                                                                            :WWWM^                                          
-                                                                                                            .NWWW|                                          
-                                                                                                             XWWW]                                          
-                                                                                                             JWWWv                                          
-                                                                                                             ~adh!                                          </pre
-                  >
-                </a>
-              </article>
-            </li>
-          </ul>
+          <div class="projects-content">
+              
+            </div>
         </main>
       </div>
 
@@ -194,10 +108,19 @@ vMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWM@H@@QNNNNNMWWWWWWWWWWWWWWWWWWWW
     </div>
 
     <script>
+      let pagePath = "/ascii-content.html";
+      console.log(pagePath);
+      fetch(pagePath)
+      .then(data => data.text())
+      .then(html =>  {
+        // console.log(html)
+        document.querySelector(".projects-content").insertAdjacentHTML("beforeend", html);
+        contentLoaded();
+      });
+    
       let navigation = document.querySelector("#navigation");
       let navMinimized = true;
       let energySpeed = 0;
-      let ascii = document.querySelector(".asciiContainer");
 
       let bonnetje = {
         home: {
@@ -207,6 +130,23 @@ vMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWM@H@@QNNNNNMWWWWWWWWWWWWWWWWWWWW
           "black pixels": 12,
         },
       };
+
+
+      // function openWindow() {
+        // handleEngerySpeed(energySpeed + 100);
+
+        // window.open(
+            // "./projects/bart/image.html",
+            // "DescriptiveWindowName",
+            // `left=${Math.random() * 1000},top=${
+              // Math.random() * 1000
+            // },width=320,height=320`
+          // );
+      // }
+
+      // function onClosedWindow() {
+        // handleEngerySpeed(energySpeed - 100);
+      // }
 
       function handleEngerySpeed(newSpeed) {
         energySpeed = newSpeed;
@@ -254,16 +194,20 @@ vMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWM@H@@QNNNNNMWWWWWWWWWWWWWWWWWWWW
         }
       });
 
-      document
-        .querySelector(".asciiContainer")
-        .addEventListener("click", (e) => {
+      function contentLoaded() {
+        // alert('test content loaded');
+        let asciis = document.querySelectorAll(".asciiContainer");
+        
+        asciis.forEach(singleAscii => {
+          singleAscii.addEventListener("click", (e) => {
           // var windowObjectReference;
           // var windowFeatures = "popup";
-
+          let projectUrl = singleAscii.dataset.url
+          console.log(singleAscii.dataset.url);
           handleEngerySpeed(energySpeed + 123);
 
           let windowObjectReference = window.open(
-            "./projects/bart/image.html",
+            projectUrl,
             "DescriptiveWindowName",
             `left=${Math.random() * 1000},top=${
               Math.random() * 1000
@@ -287,39 +231,54 @@ vMMMMMMMMMMMMMMMMMMMMMMMMMMMMMWWWWWWWWWWWWWWWWWWM@H@@QNNNNNMWWWWWWWWWWWWWWWWWWWW
           };
         });
 
-      ascii.addEventListener("mouseenter", (e) => {
-        let tooltip = document.createElement("div");
-        tooltip.innerHTML = "> click to view colored image";
-        tooltip.className = "tooltip";
-        ascii.appendChild(tooltip);
+        singleAscii.addEventListener("mouseenter", (e) => {
+          let tooltip = document.createElement("div");
+          tooltip.innerHTML = "> click to view colored image";
+          tooltip.className = "tooltip";
+          singleAscii.appendChild(tooltip);
 
-        ascii.addEventListener("mousemove", (e) => {
-          // console.log(e);
-          tooltip.style.top = e.clientY - 30 + "px";
-          tooltip.style.left = e.clientX + "px";
-        });
+          singleAscii.addEventListener("mousemove", (e) => {
+            // console.log(e);
+            tooltip.style.top = e.clientY - 30 + "px";
+            tooltip.style.left = e.clientX + "px";
+          });
 
-        ascii.addEventListener("mouseleave", (e) => {
-          tooltip.remove();
+          singleAscii.addEventListener("mouseleave", (e) => {
+            tooltip.remove();
+          });
         });
-      });
+        })
+       
+      }
+      
 
       document.querySelector("body").style.transition = "0.4s";
-      document.addEventListener("mouseenter", () => {
-        if (document.hasFocus()) {
-          document.querySelector("body").style.opacity = "1";
-        } else {
-          document.querySelector("body").style.opacity = "0.1";
-        }
-      });
+      // document.addEventListener("mouseover", () => {
+      //   console.log("mouseover detefcted")
+      //   if (document.hasFocus()) {
+      //     document.querySelector("body").style.opacity = "1";
+      //   } else {
+      //     document.querySelector("body").style.opacity = "0.1";
+      //   }
+      // });
 
-      document.addEventListener("mouseleave", () => {
+      setInterval(() => {
         if (document.hasFocus()) {
           document.querySelector("body").style.opacity = "1";
         } else {
-          document.querySelector("body").style.opacity = "0.1";
+          document.querySelector("body").style.opacity = "0.3";
         }
-      });
+      }, 300)
+
+      // document.addEventListener("mouseover", () => {
+        // document.querySelector("body").style.opacity = "0.1";
+        // console.log('mouseleave detected')
+        // if (document.hasFocus()) {
+        //   document.querySelector("body").style.opacity = "1";
+        // } else {
+        //   document.querySelector("body").style.opacity = "0.1";
+        // }
+      // });
     </script>
   </body>
 </html>
