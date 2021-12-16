@@ -1,0 +1,1 @@
+ExoSphere, an AI server that stores data and content.This replaces huge polluting data centers that facilitate cloud storage and services. The AI generates images, and films from the most necessary metadata. If everyone switches to ExoSphere, 70% of excisting data servers could be closed. This is an improvement for the environment.
