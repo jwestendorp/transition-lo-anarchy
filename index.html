@@ -83,15 +83,26 @@
         padding: 2px;
       }
       .projects-content {
-        columns: 2;
+        /* width: 55rem; */
+        margin: auto;
+      }
+
+      p, h2 {
+        width: 55rem;
+        display: block;
+        margin: auto;
+      }
+      p{padding: 2rem 0;}
+
+      .project{
+        margin-bottom: 5rem;
       }
     </style>
   </head>
   <body>
     <div id="appContainer">
       <div id="content">
-        <h1>Home</h1>
-        <hr />
+        <h1>Transition 2021</h1>
         <main>
           <div class="projects-content">
               
@@ -150,7 +161,7 @@
 
       function handleEngerySpeed(newSpeed) {
         energySpeed = newSpeed;
-        document.querySelector("#energySpeed").innerHTML = `${energySpeed} p/s`;
+        document.querySelector("#energySpeed").innerHTML = `${energySpeed} Watt`;
       }
 
       function handleCollapsedRefresh() {
