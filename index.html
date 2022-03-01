@@ -1,216 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Static Template</title>
 
-    <style>
-      body {
-        background: black;
-        color: rgb(255, 0, 0);
-        font-family: "Trebuchet MS", sans-serif;
-        margin: 0;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Static Template</title>
 
-      #content {
-        padding: 20px;
-      }
+  <style>
+    body {
+      background: black;
+      color: rgb(255, 0, 0);
+      font-family: "Trebuchet MS", sans-serif;
+      margin: 0;
+    }
 
-      #appContainer {
-        display: grid;
-        grid-template-columns: auto 5rem;
-      }
+    h1 {
+      text-align: center;
+      padding: 0 0 3rem 0;
+      font-family: monospace;
+      font-size: 3.4rem;
+    }
 
-      #navigation {
-        background: rgb(0, 255, 0);
-        color: black;
-        height: 100vh;
-        position: fixed;
-        right: 0;
-        overflow: hidden;
-      }
+    #content {
+      padding: 20px;
+    }
 
-      #asciiContainer {
-        display: inline-block;
-        font-size: 7px;
-        text-align: center;
-        text-rendering: optimizeSpeed;
-        font-family: "Courier New", monospace;
-        cursor: pointer;
-      }
+    #appContainer {
+      display: grid;
+      grid-template-columns: auto 5rem;
+    }
 
-      pre {
-        font-size: 7px;
-        font-family: monospace;
-        color: rgb(0, 255, 0);
-        line-height: 7px;
-        cursor: pointer;
-      }
+    #navigation {
+      background: rgb(0, 255, 0);
+      color: black;
+      height: 100vh;
+      position: fixed;
+      right: 0;
+      overflow: hidden;
+    }
 
-      #content {
-        overflow: hidden;
-      }
+    #asciiContainer {
+      display: inline-block;
+      font-size: 7px;
+      text-align: center;
+      text-rendering: optimizeSpeed;
+      font-family: "Courier New", monospace;
+      cursor: pointer;
+    }
 
-      .minimized {
-        color: red;
-        width: 4rem;
-        align-items: center;
-        display: flex;
-        justify-content: center;
-      }
+    pre {
+      font-size: 7px;
+      font-family: monospace;
+      color: rgb(0, 255, 0);
+      line-height: 7px;
+      cursor: pointer;
+    }
 
-      .collapsed {
-        background: red;
-        width: 15rem;
-      }
+    #content {
+      overflow: hidden;
+    }
 
-      #minimizedContents {
-        transform: rotate(180deg);
-        writing-mode: vertical-lr;
-      }
+    .minimized {
+      color: red;
+      width: 4rem;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
 
-      #energySpeed {
-        font-weight: bold;
-        font-size: 1.3rem;
-      }
+    .collapsed {
+      background: red;
+      width: 15rem;
+    }
 
-      .tooltip {
-        position: fixed;
-        color: rgb(255, 255, 255);
-        background: black;
-        padding: 2px;
-      }
-      .projects-content {
-        /* width: 55rem; */
-        margin: auto;
-      }
+    #minimizedContents {
+      transform: rotate(180deg);
+      writing-mode: vertical-lr;
+    }
 
-      p, h2 {
-        width: 55rem;
-        display: block;
-        margin: auto;
-      }
-      p{padding: 2rem 0;}
+    #energySpeed {
+      font-weight: bold;
+      font-size: 1.3rem;
+    }
 
-      .project{
-        margin-bottom: 5rem;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="appContainer">
-      <div id="content">
-        <h1>Transition 2021</h1>
-        <main>
-          <div class="projects-content">
-              
-            </div>
-        </main>
-      </div>
+    .tooltip {
+      position: fixed;
+      color: rgb(255, 255, 255);
+      background: black;
+      padding: 2px;
+    }
 
-      <div id="navigation" class="minimized">
-        <div id="minimizedContents">
-          Entery consumption: <span id="energySpeed">0</span>
+    .projects-content {
+      /* width: 55rem; */
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    p,
+    h2 {
+      width: 55rem;
+      display: block;
+      margin: auto;
+    }
+
+    p {
+      padding: 2rem 0;
+    }
+
+    .project {
+      margin-bottom: 5rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="appContainer">
+    <div id="content">
+      <h1>Transition 2021</h1>
+      <main>
+        <div class="projects-content">
+
         </div>
-        <div id="collapsedContents" hidden>bonnetje</div>
-      </div>
+      </main>
     </div>
 
-    <script>
-      let pagePath = "/ascii-content.html";
-      console.log(pagePath);
-      fetch(pagePath)
+    <div id="navigation" class="minimized">
+      <div id="minimizedContents">
+        Entery consumption: <span id="energySpeed">0</span>
+      </div>
+      <div id="collapsedContents" hidden>bonnetje</div>
+    </div>
+  </div>
+
+  <script>
+    let pagePath = "/ascii-content.html";
+    console.log(pagePath);
+    fetch(pagePath)
       .then(data => data.text())
-      .then(html =>  {
+      .then(html => {
         // console.log(html)
         document.querySelector(".projects-content").insertAdjacentHTML("beforeend", html);
         contentLoaded();
       });
-    
-      let navigation = document.querySelector("#navigation");
-      let navMinimized = true;
-      let energySpeed = 0;
 
-      let bonnetje = {
-        home: {
-          "red pixels": 123,
-          "green pixels": 234,
-          "blue pixels": 345,
-          "black pixels": 12,
-        },
-      };
+    let navigation = document.querySelector("#navigation");
+    let navMinimized = true;
+    let energySpeed = 0;
+
+    let bonnetje = {
+      home: {
+        "red pixels": 123,
+        "green pixels": 234,
+        "blue pixels": 345,
+        "black pixels": 12,
+      },
+    };
 
 
-      // function openWindow() {
-        // handleEngerySpeed(energySpeed + 100);
+    // function openWindow() {
+    // handleEngerySpeed(energySpeed + 100);
 
-        // window.open(
-            // "./projects/bart/image.html",
-            // "DescriptiveWindowName",
-            // `left=${Math.random() * 1000},top=${
-              // Math.random() * 1000
-            // },width=320,height=320`
-          // );
-      // }
+    // window.open(
+    // "./projects/bart/image.html",
+    // "DescriptiveWindowName",
+    // `left=${Math.random() * 1000},top=${
+    // Math.random() * 1000
+    // },width=320,height=320`
+    // );
+    // }
 
-      // function onClosedWindow() {
-        // handleEngerySpeed(energySpeed - 100);
-      // }
+    // function onClosedWindow() {
+    // handleEngerySpeed(energySpeed - 100);
+    // }
 
-      function handleEngerySpeed(newSpeed) {
-        energySpeed = newSpeed;
-        document.querySelector("#energySpeed").innerHTML = `${energySpeed} Watt`;
-      }
+    function handleEngerySpeed(newSpeed) {
+      energySpeed = newSpeed;
+      document.querySelector("#energySpeed").innerHTML = `${energySpeed} Watt`;
+    }
 
-      function handleCollapsedRefresh() {
-        let collapsedContents = document.querySelector("#collapsedContents");
-        let minimizedContents = document.querySelector("#minimizedContents");
+    function handleCollapsedRefresh() {
+      let collapsedContents = document.querySelector("#collapsedContents");
+      let minimizedContents = document.querySelector("#minimizedContents");
 
-        collapsedContents.innerHTML = "";
+      collapsedContents.innerHTML = "";
 
-        Object.keys(bonnetje).forEach((page) => {
-          let ul = document.createElement("ul");
-          ul.append(`${page}: `);
-          collapsedContents.appendChild(ul);
+      Object.keys(bonnetje).forEach((page) => {
+        let ul = document.createElement("ul");
+        ul.append(`${page}: `);
+        collapsedContents.appendChild(ul);
 
-          Object.entries(bonnetje[page]).forEach(([key, value]) => {
-            console.log(key, value);
-            let li = document.createElement("li");
-            li.innerHTML = key + " " + value;
+        Object.entries(bonnetje[page]).forEach(([key, value]) => {
+          console.log(key, value);
+          let li = document.createElement("li");
+          li.innerHTML = key + " " + value;
 
-            ul.appendChild(li);
-          });
+          ul.appendChild(li);
         });
-      }
-
-      handleEngerySpeed(500);
-
-      navigation.addEventListener("click", (e) => {
-        navMinimized = !navMinimized;
-        let collapsedContents = document.querySelector("#collapsedContents");
-        let minimizedContents = document.querySelector("#minimizedContents");
-
-        if (navMinimized) {
-          navigation.className = "minimized";
-          collapsedContents.style.display = "none";
-          minimizedContents.style.display = "block";
-        } else {
-          navigation.className = "collapsed";
-          minimizedContents.style.display = "none";
-          collapsedContents.style.display = "block";
-
-          handleCollapsedRefresh();
-        }
       });
+    }
 
-      function contentLoaded() {
-        // alert('test content loaded');
-        let asciis = document.querySelectorAll(".asciiContainer");
-        
-        asciis.forEach(singleAscii => {
-          singleAscii.addEventListener("click", (e) => {
+    handleEngerySpeed(500);
+
+    navigation.addEventListener("click", (e) => {
+      navMinimized = !navMinimized;
+      let collapsedContents = document.querySelector("#collapsedContents");
+      let minimizedContents = document.querySelector("#minimizedContents");
+
+      if (navMinimized) {
+        navigation.className = "minimized";
+        collapsedContents.style.display = "none";
+        minimizedContents.style.display = "block";
+      } else {
+        navigation.className = "collapsed";
+        minimizedContents.style.display = "none";
+        collapsedContents.style.display = "block";
+
+        handleCollapsedRefresh();
+      }
+    });
+
+    function contentLoaded() {
+      // alert('test content loaded');
+      let asciis = document.querySelectorAll(".asciiContainer");
+
+      asciis.forEach(singleAscii => {
+        let { width, height } = singleAscii.dataset
+        console.log(width, height)
+        singleAscii.addEventListener("click", (e) => {
           // var windowObjectReference;
           // var windowFeatures = "popup";
           let projectUrl = singleAscii.dataset.url
@@ -220,9 +239,8 @@
           let windowObjectReference = window.open(
             projectUrl,
             "DescriptiveWindowName",
-            `left=${Math.random() * 1000},top=${
-              Math.random() * 1000
-            },width=320,height=320`
+            `left=${Math.random() * 1000},top=${Math.random() * 1000
+            },width=${width},height=${height}`
           );
 
           function closWindowCallback() {
@@ -258,28 +276,28 @@
             tooltip.remove();
           });
         });
-        })
-       
+      })
+
+    }
+
+
+    document.querySelector("body").style.transition = "0.4s";
+    // document.addEventListener("mouseover", () => {
+    //   console.log("mouseover detefcted")
+    //   if (document.hasFocus()) {
+    //     document.querySelector("body").style.opacity = "1";
+    //   } else {
+    //     document.querySelector("body").style.opacity = "0.1";
+    //   }
+    // });
+
+    setInterval(() => {
+      if (document.hasFocus()) {
+        document.querySelector("body").style.opacity = "1";
+      } else {
+        document.querySelector("body").style.opacity = "0.3";
       }
-      
-
-      document.querySelector("body").style.transition = "0.4s";
-      // document.addEventListener("mouseover", () => {
-      //   console.log("mouseover detefcted")
-      //   if (document.hasFocus()) {
-      //     document.querySelector("body").style.opacity = "1";
-      //   } else {
-      //     document.querySelector("body").style.opacity = "0.1";
-      //   }
-      // });
-
-      setInterval(() => {
-        if (document.hasFocus()) {
-          document.querySelector("body").style.opacity = "1";
-        } else {
-          document.querySelector("body").style.opacity = "0.3";
-        }
-      }, 300)
+    }, 300)
 
       // document.addEventListener("mouseover", () => {
         // document.querySelector("body").style.opacity = "0.1";
@@ -290,6 +308,7 @@
         //   document.querySelector("body").style.opacity = "0.1";
         // }
       // });
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>

@@ -1,38 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
 
-    <style>
-      body {
-        margin: 0;
-        background: black;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
 
-      img {
-      }
-    </style>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      overflow: hidden;
+    }
 
-    <script>
-      var RunCallbackFunction = function () {}; //reference holder only
-      // only works on servers
-      window.addEventListener(
-        "beforeunload",
-        function (e) {
-          // Do something
-          // window.opener.onClosedWindow()
-          RunCallbackFunction();
-        },
-        false
-      );
-    </script>
-  </head>
-  <body>
-    <image
-      src="image.png" width="100%"
-    />
-  </body>
+    img {}
+  </style>
+
+  <script>
+    var RunCallbackFunction = function () { }; //reference holder only
+    // only works on servers
+    window.addEventListener(
+      "beforeunload",
+      function (e) {
+        // Do something
+        // window.opener.onClosedWindow()
+        RunCallbackFunction();
+      },
+      false
+    );
+  </script>
+</head>
+
+<body>
+  <image src="image.png" width="100%" />
+</body>
+
 </html>
